@@ -8,7 +8,6 @@ https://github.com/shanpenghui/ORB_SLAM3_Fixed => 여러 문제점을 개선했�
 
 
 
-##################################################################
 # 핵심 파일 설명 
 1)Vocabulary/ORBvoc.txt => ORB_SLAM3 실행을 위해 반드시 들어가는 항목
 2)~~~.yaml => 카메라 특성값을 불러오는 파일. para meter를 조절할 수 있으며, fps, 카메라 resolution 등이 들어감. 
@@ -17,8 +16,7 @@ https://github.com/shanpenghui/ORB_SLAM3_Fixed => 여러 문제점을 개선했�
 
 
 
-#################################################################
-에러 해결법
+# 아래는 에러 해결법
 #에러 관련 참고 사이트 : https://sidosidopy.tistory.com/51
 
 
