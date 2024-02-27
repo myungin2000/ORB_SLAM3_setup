@@ -1,8 +1,11 @@
 참고자료
 
 https://www.youtube.com/watch?v=DxqzwBQVCNw => youtube 그대로 따라하면 됨
+
 https://github.com/Mauhing/ORB_SLAM3 => ORB_SLAM3 유튜브에나온 링크
+
 https://github.com/UZ-SLAMLab/ORB_SLAM3 => ORB_SLAM3 원작자 링크
+
 https://github.com/shanpenghui/ORB_SLAM3_Fixed => 여러 문제점을 개선했다고 나온 ORB_SLAM3. 중국어로 되있으니 번역기 돌려야되는 불편함이 있어서 버렸음
 
 
