@@ -107,7 +107,20 @@ Camera1.p2: -0.00281733
 
 ![image](https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/e3db96f9-1eb7-4d96-9666-91ee47e03914)
 <img width="563" alt="image" src="https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/049fb874-6824-44b6-a39a-4b3e84907756">
+
 ![image](https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/de2b881b-4825-450b-a45d-161c3e5ae888)
+
+
+# Webcam 으로 구동
+
+https://robot-vision-develop-story.tistory.com/10
+위 사이트에 있는 코드를 그대로 mono_tum.cc 파일에 복붙해주고 다시 빌드 후 '$ ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt ./Examples/Monocular/TUM1.yaml'을 통해 실행해 주면 된다.
+
+다만, 에러가 뜰텐데 53번째 줄에 있는 'ORB_SLAM2' 라고 나와있는 부분 두 개를 'ORB_SLAM3'으로 고쳐주면 된다.
+
+웹캠을 쓰니까 TUM1.yaml 파일에 있는 파라메터들도 본인의 카메라에 맞는 것으로 바꿔주도록 한다.
+
+
 
 
 
