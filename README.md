@@ -79,5 +79,49 @@ Examples/Stereo-inertial/stereo_inertial_realsense_D435i.cc 파일의
 // sensor.set_option(RS2_OPTION_AUTO_EXPOSURE_LIMIT,5000);
 로 주석처리하기
 
+# Camera Calibration
+카메라로 찍은 영상의 왜곡을 없야기 위해 Camere Caliration 과정을 반드시 거쳐야한다.
+
+해당 영상을 참고하여 진행하였다
+https://www.youtube.com/watch?v=iOmYtms45ho
+
+Calibration을 위해서는 camera calibration checkerboard을 찍은 사진들이 필요하다. 영상 말대로 10개 내외의 사진들을 getImages.py 코드를 이용해 캡쳐하였다.
+
+이후, calibrate_phone.py 코드를 이용하여 Caliration을 진행한다. 코드 안에 사진들의 경로를 설정해주고, 본인이 이용한 camera calibration checkerboard의 크기에 맞게 숫자들을 바꿔준다.
+
+Calibration이 정상적으로 이루어졌다면 VS Code의 터미널에 카메라 파라메터들이 출력된다.
+
+해당 값들은 ORB_SLAM 코드의 yaml 파일에 대입해주고 다시 build 후 ORB_SLAM을 실해해주면 된다.
+  
+예시  
+Camera1.fx: 1.17447062e+03
+Camera1.fy: 1.17354335e+03
+Camera1.cx: 6.25808153e+02
+Camera1.cy: 3.60915223e+02
+
+Camera1.k1: -0.12183388
+Camera1.k2: 0.56770901
+Camera1.p1: -0.00073029
+Camera1.p2: -0.00281733
+
+![image](https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/e3db96f9-1eb7-4d96-9666-91ee47e03914)
+<img width="563" alt="image" src="https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/049fb874-6824-44b6-a39a-4b3e84907756">
+
+![image](https://github.com/myungin2000/ORB_SLAM3_setup/assets/143677198/de2b881b-4825-450b-a45d-161c3e5ae888)
+
+
+# Webcam 으로 구동
+
+https://robot-vision-develop-story.tistory.com/10
+위 사이트에 있는 코드를 그대로 mono_tum.cc 파일에 복붙해주고 다시 빌드 후 '$ ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt ./Examples/Monocular/TUM1.yaml'을 통해 실행해 주면 된다.
+
+다만, 에러가 뜰텐데 53번째 줄에 있는 'ORB_SLAM2' 라고 나와있는 부분 두 개를 'ORB_SLAM3'으로 고쳐주면 된다.
+
+웹캠을 쓰니까 TUM1.yaml 파일에 있는 파라메터들도 본인의 카메라에 맞는 것으로 바꿔주도록 한다.
+
+
+
+
+
 
 
